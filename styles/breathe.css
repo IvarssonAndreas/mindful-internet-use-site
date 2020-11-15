@@ -44,12 +44,6 @@
     transform: scale(1);
 }
 
-@media only screen and (max-width: 800px) {
-    .breathe-container {
-        width: 250px;
-        height: 250px;
-    }
-}
 
 .breathe-text {
     color: var(--main-text-color);
@@ -174,18 +168,26 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+
+
+
+@media only screen and (max-width: 900px) {
     .breathe-container {
-        width: 250px;
-        height: 250px;
+        width: 130px;
+        height: 130px;
     }
 
     .gradient-circle {
-        height: 290px;
-        width: 290px;
+        height: 170px;
+        width: 170px;
     }
 
     .breathe-pointer-container {
         display: none;
+    }
+   
+
+    .breathe-text__action {
+        font-size: 1.1rem;
     }
 }

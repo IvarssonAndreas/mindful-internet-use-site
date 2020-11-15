@@ -4,9 +4,12 @@
     --main-text-color: #fff;
 }
 
+html, body {
+    overflow-y:hidden;
+    height:100%;
+}
 
 body {
-
     background: var(--main-bg-color);
     color: var(--main-text-color);
     font-size: 1.1rem;
@@ -14,7 +17,11 @@ body {
 }
 
 
+
+
 .top-section-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -38,20 +45,15 @@ body {
 }
 
 
-@media only screen and (max-width: 800px) {
-
-    .top-section-container {
-        height: 100%;
-    }
+@media only screen and (max-width: 900px) {
 
     .top-section {
         width: 100%;
     }
 
     .top-section:first-child {
-        margin-top: 15vh;
-        margin-bottom: 15vh;
-        height: 15vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
     }
 
     .top-section:last-child {

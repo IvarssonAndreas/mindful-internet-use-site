@@ -57,8 +57,7 @@ document.getElementById('breathe').innerHTML = `
                 <span class="breathe-pointer"></span>
             </div>
 
-            <div class="gradient-circle"></div>
-            <div id="progress-circle" class="gradient-circle--outer"></div>
+            <div class="gradient-circle"></div> 
         </div>`
 
 breathe()
