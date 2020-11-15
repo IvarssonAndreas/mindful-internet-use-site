@@ -1,0 +1,191 @@
+.breath {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.breathe-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.breathe-text__action--2 {
+    font-size: 30px;
+}
+
+#counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#counter span {
+    color: var(--main-text-color);
+}
+
+#counter #breathCounter {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin: 2rem;
+}
+
+
+
+.breathe-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 800px) {
+    .breathe-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.breathe-text {
+    color: var(--main-text-color);
+}
+
+.circle {
+    background-color: var(--main-bg-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.breathe-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+
+.breathe-text__action {
+    font-size: 2.5rem;
+    color: var(--main-text-color);
+}
+
+
+.gradient-circle {
+    background: conic-gradient(
+            var(--main-color) 20%,
+            var(--main-color) 40%,
+            #fff 40%,
+            #fff 60%,
+            var(--main-color) 60%,
+            var(--main-color) 80%
+    );
+    height: 340px;
+    width: 340px;
+    z-index: -3;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.gradient-circle--outer {
+    --percentage-done: 0%;
+    background: conic-gradient(
+            var(--main-color) 0%,
+            var(--main-color) ,
+            var(--main-bg-color),
+            var(--main-bg-color) 100%,
+    );
+    height: 320px;
+    width: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.breathe-pointer {
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.breathe-pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 10s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.breathe-container.grow {
+    animation: grow 4s linear forwards;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.breathe-container.shrink {
+    animation: shrink 4s linear forwards;
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .breathe-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .gradient-circle {
+        height: 290px;
+        width: 290px;
+    }
+
+    .breathe-pointer-container {
+        display: none;
+    }
+}
