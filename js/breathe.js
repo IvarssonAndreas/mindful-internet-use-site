@@ -17,9 +17,6 @@ function breathe(numBreaths = 10) {
     function breathAnimation() {
         breathLeftText.innerText = numBreaths - counter;
 
-        if (counter === numBreaths) {
-            counter = 0;
-        }
         actionText.innerText = 'Breathe In';
         container.className = 'breathe-container grow';
 
@@ -34,6 +31,11 @@ function breathe(numBreaths = 10) {
 
         }, breatheTime);
         counter++
+
+
+        if (counter >= numBreaths) {
+            counter = 0;
+        }
 
 
     }
